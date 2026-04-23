@@ -715,10 +715,9 @@ function ScoreSyncPage() {
         <section className="ss-hero">
           <div className="ss-hero-inner">
             <div className="ss-eyebrow">FOR COMPOSERS, MUSICIANS, AND AUDIO PROFESSIONALS</div>
-            <h1>Your music deserves a better first impression.</h1>
+            <h1>Create your card for free. Pay once when you’re ready to publish.</h1>
             <p>
-              ScoreSync helps you create a playable presentation card with your music, bio, images, links,
-              and credits — so you can pitch yourself professionally with one clean link.
+              ScoreSync helps composers and musicians build a polished, playable presentation card without another monthly subscription — just a clean DIY tool for the moment you need to pitch.
             </p>
             <div className="ss-hero-ctas">
               <a href={SCORESYNC_WAITLIST_URL || '#beta'} target={SCORESYNC_WAITLIST_URL ? '_blank' : undefined} rel={SCORESYNC_WAITLIST_URL ? 'noopener noreferrer' : undefined} className="ss-btn ss-btn-primary">Create for free, pay once to publish</a>
@@ -803,7 +802,7 @@ function ScoreSyncPage() {
               <span>FOUNDING USER BETA</span>
               <h2>Join the early beta.</h2>
               <p>
-                We’re keeping the first batch small on purpose so we can learn from real users, sharpen the offer, and validate a one-time pricing model that feels fair.
+                We’re keeping the first batch small on purpose so we can learn from real users, sharpen the DIY offer, and figure out what a fair one-time publish fee should actually include.
               </p>
             </div>
 
@@ -869,12 +868,21 @@ function ScoreSyncPage() {
                 <select defaultValue="">
                   <option value="" disabled>Select one</option>
                   <option>Free to create, $19 to publish one card</option>
-                  <option>One-time fee per card</option>
-                  <option>$49 done-with-you setup</option>
-                  <option>$99 premium founding setup</option>
+                  <option>Free to create, $29 to publish one card</option>
+                  <option>One-time fee with limited edits included</option>
                   <option>Monthly subscription</option>
                 </select>
               </label>
+
+              <fieldset className="field checkbox-group">
+                <legend>If you paid once to publish, what should that include?</legend>
+                <label><input type="checkbox" /> Unlimited edits forever</label>
+                <label><input type="checkbox" /> Edits for 30 days after publishing</label>
+                <label><input type="checkbox" /> Edits for 90 days after publishing</label>
+                <label><input type="checkbox" /> One live card only</label>
+                <label><input type="checkbox" /> Multiple versions/cards for different pitches</label>
+                <label><input type="checkbox" /> Ability to duplicate a card for new pitches</label>
+              </fieldset>
 
               <button className="ss-btn ss-btn-primary ss-btn-full" type="submit">{formReady ? 'Open beta form' : 'Join the beta'}</button>
               <p className="guarantee">Wire this to Tally, Typeform, or Formspree before sharing publicly.</p>
