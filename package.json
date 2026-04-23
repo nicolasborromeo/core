@@ -1,0 +1,21 @@
+{
+  "name": "core-sampler",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 3000",
+    "build": "tsc && vite build",
+    "preview": "vite preview --host --port ${PORT:-4173}"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.1",
+    "typescript": "^5.6.2",
+    "vite": "^5.4.8"
+  }
+}

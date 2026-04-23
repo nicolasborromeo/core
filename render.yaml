@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: coretone-landing-pages
+    runtime: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    envVars:
+      - key: VITE_CORE_SAMPLER_WAITLIST_URL
+        sync: false
+      - key: VITE_SCORESYNC_WAITLIST_URL
+        sync: false
+    routes:
+      - type: rewrite
+        source: /scoresync
+        destination: /index.html
+      - type: rewrite
+        source: /scoresync/*
+        destination: /index.html
+      - type: rewrite
+        source: /*
+        destination: /index.html
