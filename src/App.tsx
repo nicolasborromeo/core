@@ -721,7 +721,7 @@ function ScoreSyncPage() {
               and credits — so you can pitch yourself professionally with one clean link.
             </p>
             <div className="ss-hero-ctas">
-              <a href={SCORESYNC_WAITLIST_URL || '#beta'} target={SCORESYNC_WAITLIST_URL ? '_blank' : undefined} rel={SCORESYNC_WAITLIST_URL ? 'noopener noreferrer' : undefined} className="ss-btn ss-btn-primary">Join the beta</a>
+              <a href={SCORESYNC_WAITLIST_URL || '#beta'} target={SCORESYNC_WAITLIST_URL ? '_blank' : undefined} rel={SCORESYNC_WAITLIST_URL ? 'noopener noreferrer' : undefined} className="ss-btn ss-btn-primary">Create for free, pay once to publish</a>
               <a href="#features" className="ss-btn ss-btn-secondary">See how it works</a>
             </div>
           </div>
@@ -760,8 +760,8 @@ function ScoreSyncPage() {
                 <p>Your work should be heard quickly, not buried behind generic portfolio templates.</p>
               </div>
               <div className="ss-card">
-                <h3>Built for pitching</h3>
-                <p>Useful when sending work to directors, studios, collaborators, or clients.</p>
+                <h3>Accessible pricing</h3>
+                <p>Better fit for real musicians: free to create, then a one-time fee when you’re actually ready to publish.</p>
               </div>
             </div>
           </div>
@@ -803,7 +803,7 @@ function ScoreSyncPage() {
               <span>FOUNDING USER BETA</span>
               <h2>Join the early beta.</h2>
               <p>
-                We’re keeping the first batch small on purpose so we can learn from real users and sharpen the offer.
+                We’re keeping the first batch small on purpose so we can learn from real users, sharpen the offer, and validate a one-time pricing model that feels fair.
               </p>
             </div>
 
@@ -865,13 +865,14 @@ function ScoreSyncPage() {
               </div>
 
               <label className="field">
-                <span>What feels more attractive?</span>
+                <span>Which pricing model feels best?</span>
                 <select defaultValue="">
                   <option value="" disabled>Select one</option>
-                  <option>Free beta</option>
-                  <option>$49 founding setup</option>
+                  <option>Free to create, $19 to publish one card</option>
+                  <option>One-time fee per card</option>
+                  <option>$49 done-with-you setup</option>
                   <option>$99 premium founding setup</option>
-                  <option>Monthly subscription later</option>
+                  <option>Monthly subscription</option>
                 </select>
               </label>
 
