@@ -65,97 +65,9 @@ function WaveformSVG({ height = 100 }: { height?: number }) {
 }
 
 function PluginMockup() {
-  const [activePad, setActivePad] = useState<number | null>(null)
-  const loadedPads = [0, 2, 4, 5, 7, 8, 10, 12, 14, 15]
-
-  function handlePad(i: number) {
-    setActivePad(i)
-    setTimeout(() => setActivePad(null), 200)
-  }
-
   return (
-    <div className="plugin-window">
-      <div className="plugin-titlebar">
-        <span className="plugin-badge">CT</span>
-        <span className="plugin-title-text">CORE SAMPLER · PRO TOOLS FIRST · EARLY BUILD</span>
-        <div className="plugin-dots">
-          <span className="dot dot-r" />
-          <span className="dot dot-y" />
-          <span className="dot dot-g" />
-        </div>
-      </div>
-
-      <div className="plugin-body">
-        <div className="plugin-wave">
-          <div className="wave-header">
-            <span className="wave-label">SAMPLE DISPLAY</span>
-            <div className="wave-meta">
-              <span className="wave-info">CHOP_01.WAV</span>
-              <span className="wave-info wave-info--dim">44.1kHz · 24bit · STEREO</span>
-            </div>
-          </div>
-          <div className="wave-canvas">
-            <WaveformSVG height={100} />
-          </div>
-          <div className="wave-ruler">
-            {['0', '0:01', '0:02', '0:03', '0:04', 'END'].map(t => (
-              <span key={t} className="ruler-mark">{t}</span>
-            ))}
-          </div>
-        </div>
-
-        <div className="plugin-lower">
-          <div className="pads-grid">
-            {Array.from({ length: 16 }, (_, i) => (
-              <div
-                key={i}
-                className={`pad ${loadedPads.includes(i) ? 'pad-loaded' : ''} ${activePad === i ? 'pad-active' : ''}`}
-                onMouseDown={() => handlePad(i)}
-              >
-                <span className="pad-n">{i + 1}</span>
-                {loadedPads.includes(i) && <span className="pad-bar" />}
-              </div>
-            ))}
-          </div>
-
-          <div className="plugin-sidebar">
-            <div className="knobs-row">
-              {[
-                { lbl: 'PITCH', r: '22deg' },
-                { lbl: 'VOL', r: '-12deg' },
-                { lbl: 'PAN', r: '5deg' },
-              ].map(({ lbl, r }) => (
-                <div key={lbl} className="knob-group">
-                  <div className="knob" style={{ '--r': r } as CSSProperties} />
-                  <span className="knob-lbl">{lbl}</span>
-                </div>
-              ))}
-            </div>
-
-            <div className="plugin-meters">
-              <div className="meter-row">
-                <span className="meter-lbl">L</span>
-                <div className="meter-track"><div className="meter-fill" style={{ width: '72%' }} /></div>
-              </div>
-              <div className="meter-row">
-                <span className="meter-lbl">R</span>
-                <div className="meter-track"><div className="meter-fill" style={{ width: '68%' }} /></div>
-              </div>
-            </div>
-
-            <div className="bpm-box">
-              <span className="bpm-lbl">BPM</span>
-              <span className="bpm-val">120</span>
-            </div>
-
-            <div className="transport">
-              <button className="t-btn t-play">▶</button>
-              <button className="t-btn">■</button>
-              <button className="t-btn t-rec">●</button>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div className="plugin-shot-frame">
+      <img className="plugin-shot" src="/core-sampler.jpg" alt="Core Sampler prototype screenshot" />
     </div>
   )
 }

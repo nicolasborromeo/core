@@ -6,10 +6,10 @@
   --bg-2:         #0d0d0d;
   --bg-3:         #141414;
   --bg-4:         #1c1c1c;
-  --accent:       #FF4500;
-  --accent-hi:    #FF6A2A;
-  --accent-glow:  rgba(255, 69, 0, 0.25);
-  --accent-dim:   rgba(255, 69, 0, 0.10);
+  --accent:       #00aacc;
+  --accent-hi:    #22c6e3;
+  --accent-glow:  rgba(0, 170, 204, 0.25);
+  --accent-dim:   rgba(0, 170, 204, 0.10);
   --text:         #EDEAE4;
   --text-muted:   #666;
   --text-dim:     #2e2e2e;
@@ -1227,6 +1227,22 @@ body::after {
   .feat-row { grid-template-columns: 1fr; }
   .feat-index { display: none; }
   .step { padding: 28px 20px; }
+}
+
+.plugin-shot-frame {
+  width: 100%;
+  background: linear-gradient(180deg, rgba(0, 170, 204, 0.12), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.35);
+}
+.plugin-shot {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.06);
 }
 
 /* ── ScoreSync page ──────────────────────────────────────────────── */
