@@ -717,7 +717,7 @@ function ScoreSyncPage() {
             <div className="ss-eyebrow">FOR COMPOSERS, MUSICIANS, AND AUDIO PROFESSIONALS</div>
             <h1>Create your card for free. Pay once when you’re ready to publish.</h1>
             <p>
-              ScoreSync helps composers and musicians build a polished, playable presentation card without another monthly subscription — just a clean DIY tool for the moment you need to pitch.
+              ScoreSync helps composers and musicians build polished, playable pitch cards without another monthly subscription — a clean DIY tool for the moments where different opportunities need different presentations.
             </p>
             <div className="ss-hero-ctas">
               <a href={SCORESYNC_WAITLIST_URL || '#beta'} target={SCORESYNC_WAITLIST_URL ? '_blank' : undefined} rel={SCORESYNC_WAITLIST_URL ? 'noopener noreferrer' : undefined} className="ss-btn ss-btn-primary">Create for free, pay once to publish</a>
@@ -759,8 +759,8 @@ function ScoreSyncPage() {
                 <p>Your work should be heard quickly, not buried behind generic portfolio templates.</p>
               </div>
               <div className="ss-card">
-                <h3>Accessible pricing</h3>
-                <p>Better fit for real musicians: free to create, then a one-time fee when you’re actually ready to publish.</p>
+                <h3>Tailored pitch cards</h3>
+                <p>Different genres, different buyers, different opportunities — not just one static page forever.</p>
               </div>
             </div>
           </div>
@@ -864,11 +864,23 @@ function ScoreSyncPage() {
               </div>
 
               <label className="field">
+                <span>Do you think you’d want separate cards for different styles, genres, or opportunities?</span>
+                <select defaultValue="">
+                  <option value="" disabled>Select one</option>
+                  <option>Yes, definitely</option>
+                  <option>Probably</option>
+                  <option>Maybe occasionally</option>
+                  <option>No, one card is enough</option>
+                </select>
+              </label>
+
+              <label className="field">
                 <span>Which pricing model feels best?</span>
                 <select defaultValue="">
                   <option value="" disabled>Select one</option>
-                  <option>Free to create, $19 to publish one card</option>
-                  <option>Free to create, $29 to publish one card</option>
+                  <option>Free to create, $19 for one live pitch card</option>
+                  <option>Free to create, $29 for one live pitch card</option>
+                  <option>$39 for a 3-card pack</option>
                   <option>One-time fee with limited edits included</option>
                   <option>Monthly subscription</option>
                 </select>
@@ -881,7 +893,7 @@ function ScoreSyncPage() {
                 <label><input type="checkbox" /> Edits for 90 days after publishing</label>
                 <label><input type="checkbox" /> One live card only</label>
                 <label><input type="checkbox" /> Multiple versions/cards for different pitches</label>
-                <label><input type="checkbox" /> Ability to duplicate a card for new pitches</label>
+                <label><input type="checkbox" /> Ability to create separate tailored pitch cards</label>
               </fieldset>
 
               <button className="ss-btn ss-btn-primary ss-btn-full" type="submit">{formReady ? 'Open beta form' : 'Join the beta'}</button>
