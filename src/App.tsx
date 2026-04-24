@@ -46,16 +46,16 @@ function WaveformSVG({ height = 100 }: { height?: number }) {
     <svg viewBox={`0 0 100 ${height}`} preserveAspectRatio="none" width="100%" height="100%">
       <defs>
         <linearGradient id="wg" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stopColor="#FF4500" stopOpacity="0.08" />
-          <stop offset="20%" stopColor="#FF4500" stopOpacity="0.85" />
-          <stop offset="50%" stopColor="#FF6A2A" stopOpacity="1" />
-          <stop offset="80%" stopColor="#FF4500" stopOpacity="0.85" />
-          <stop offset="100%" stopColor="#FF4500" stopOpacity="0.08" />
+          <stop offset="0%" stopColor="#00aacc" stopOpacity="0.08" />
+          <stop offset="20%" stopColor="#00aacc" stopOpacity="0.85" />
+          <stop offset="50%" stopColor="#22c6e3" stopOpacity="1" />
+          <stop offset="80%" stopColor="#00aacc" stopOpacity="0.85" />
+          <stop offset="100%" stopColor="#00aacc" stopOpacity="0.08" />
         </linearGradient>
         <linearGradient id="wg-center" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stopColor="#FF4500" stopOpacity="0" />
-          <stop offset="50%" stopColor="#FF4500" stopOpacity="0.15" />
-          <stop offset="100%" stopColor="#FF4500" stopOpacity="0" />
+          <stop offset="0%" stopColor="#00aacc" stopOpacity="0" />
+          <stop offset="50%" stopColor="#00aacc" stopOpacity="0.15" />
+          <stop offset="100%" stopColor="#00aacc" stopOpacity="0" />
         </linearGradient>
       </defs>
       <path d={`${top} ${bot} Z`} fill="url(#wg)" />
