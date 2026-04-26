@@ -202,7 +202,7 @@ function Manifesto() {
         {[
           { n: '01', text: 'Pro Tools still lacks a simple no-brainer sampler.' },
           { n: '02', text: 'Workarounds are clunky or overpriced.' },
-          { n: '03', text: 'Version one should solve one real problem well.' },
+          { n: '03', text: 'Get the essential sampler workflow you need to move fast and stay creative.' },
         ].map(({ n, text }, idx) => (
           <div key={n} className="manifesto-line" style={{ paddingLeft: `${idx * 64}px` } as CSSProperties}>
             <span className="manifesto-num">{n}</span>
@@ -230,14 +230,14 @@ const FEATURES = [
   {
     n: '03',
     title: 'Affordable enough to feel obvious',
-    desc: 'The idea is a price point that feels easy to justify if the plugin solves the problem cleanly.',
-    tag: 'PRICING TEST',
+    desc: 'Priced to feel like an easy yes for Pro Tools users who just want the essential workflow without overpaying for bloat.',
+    tag: 'EASY TO BUY',
   },
   {
     n: '04',
     title: 'Shaped by real early users',
-    desc: 'This page is part of validating the first release. The right features and pricing should come from real Pro Tools feedback, not guessing.',
-    tag: 'EARLY ACCESS',
+    desc: 'Built with early user feedback so the first release stays focused, useful, and worth paying for from day one.',
+    tag: 'USER SHAPED',
   },
 ]
 
@@ -250,7 +250,7 @@ function Features() {
         <div className="section-header">
           <span className="section-label">WHY THIS EXISTS</span>
           <h2 className="section-title">A simple sampler. Nothing more complicated than that.</h2>
-          <p className="section-sub">The point is not to build a giant instrument. The point is to give Pro Tools users an essential tool they can actually use right away.</p>
+          <p className="section-sub">Core Sampler is built to simplify your workflow with the essential controls you actually need, so you can create faster and stay in the moment.</p>
         </div>
         <div ref={ref} className={`feat-list${revealed ? ' revealed' : ''}`}>
           {FEATURES.map((f, i) => (
@@ -301,8 +301,8 @@ function Workflow() {
       <div className="section-inner">
         <div className="section-header">
           <span className="section-label">VERSION ONE</span>
-          <h2 className="section-title">Solve one real workflow well.</h2>
-          <p className="section-sub">This first release does not need to be the entire vision. It just needs to be useful enough that Pro Tools users feel the gap disappear.</p>
+          <h2 className="section-title">A faster sampler workflow inside Pro Tools.</h2>
+          <p className="section-sub">This first release is about giving you the essential sampler workflow you need to move quickly, stay creative, and work more efficiently.</p>
         </div>
         <div className="steps">
           {STEPS.map((s) => (
@@ -329,19 +329,19 @@ function PluginShowcase() {
       <div className="section-inner">
         <div className="section-header">
           <span className="section-label">CURRENT BUILD</span>
-          <h2 className="section-title">Real product, still early.</h2>
-          <p className="section-sub">This is not just a concept. There is already a working build in progress — now the question is what the first commercial release should be.</p>
+          <h2 className="section-title">A real build you can actually react to.</h2>
+          <p className="section-sub">This is an early working build of Core Sampler. The goal now is to refine the workflow, feature set, and pricing into something musicians would genuinely want to use.</p>
         </div>
 
         <div className="showcase-layout">
           <div className="showcase-callouts-left">
             <div className="showcase-stat">
-              <span className="showcase-stat-n">16</span>
-              <span className="showcase-stat-lbl">Pads in the current<br />interface concept</span>
+              <span className="showcase-stat-n">FAST</span>
+              <span className="showcase-stat-lbl">Built to get ideas flowing<br />without menu diving</span>
             </div>
             <div className="showcase-stat">
-              <span className="showcase-stat-n">1</span>
-              <span className="showcase-stat-lbl">Problem to solve<br />first</span>
+              <span className="showcase-stat-n">LEAN</span>
+              <span className="showcase-stat-lbl">Focused on the essentials<br />you will actually use</span>
             </div>
           </div>
 
@@ -352,11 +352,11 @@ function PluginShowcase() {
           <div className="showcase-callouts-right">
             <div className="showcase-stat">
               <span className="showcase-stat-n">AAX</span>
-              <span className="showcase-stat-lbl">Commercial path<br />being validated</span>
+              <span className="showcase-stat-lbl">Built specifically for<br />the Pro Tools workflow</span>
             </div>
             <div className="showcase-stat">
-              <span className="showcase-stat-n">$19?</span>
-              <span className="showcase-stat-lbl">One pricing hypothesis<br />to test</span>
+              <span className="showcase-stat-n">FAIR</span>
+              <span className="showcase-stat-lbl">Priced to feel accessible<br />for everyday use</span>
             </div>
           </div>
         </div>
